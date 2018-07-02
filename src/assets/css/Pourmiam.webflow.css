@@ -1,0 +1,787 @@
+.sectionheader {
+  padding-bottom: 0px;
+  background-image: -webkit-linear-gradient(135deg, #009466, #54bb84 26%, #98db9c 61%, #a6dd98 66%, #f2e783 94%);
+  background-image: linear-gradient(315deg, #009466, #54bb84 26%, #98db9c 61%, #a6dd98 66%, #f2e783 94%);
+}
+
+.navbarpm {
+  display: block;
+  height: auto;
+  margin-bottom: 0px;
+  background-color: transparent;
+}
+
+.inscription_button {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ffba51;
+  border-radius: 60px;
+  background-color: #ffc652;
+  font-family: Varela, sans-serif;
+  color: rgba(0, 0, 0, .67);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.containerheader {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.connexion_button {
+  margin-right: 0px;
+  margin-left: 0px;
+  font-family: Varela, sans-serif;
+  color: rgba(0, 0, 0, .67);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accueil_button {
+  font-family: Varela, sans-serif;
+  color: rgba(0, 0, 0, .67);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-block {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  padding-bottom: 0px;
+  float: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.text_logo {
+  position: relative;
+  left: -21px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: inline-block;
+  overflow: visible;
+  margin-top: 25px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-family: Varela, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.section_recherche {
+  margin-bottom: 0px;
+  padding-right: 0px;
+  padding-bottom: 50px;
+  padding-left: 0px;
+  background-color: #e7e7e7;
+  font-family: Varela, sans-serif;
+  color: #000;
+}
+
+.titre-acceuil {
+  display: block;
+  margin: 20px auto 10px;
+  font-family: Varela, sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+.image-2 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  text-align: left;
+}
+
+.div_recherche {
+  height: 500px;
+  border-radius: 100px;
+  background-image: url('../images/5aca0ca699758ec4cb1ee8fa_Maps.png');
+  background-position: 0px 0px;
+  background-size: contain;
+}
+
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  margin-top: 0px;
+  float: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.text_ville {
+  width: 70%;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 100px;
+  padding-left: 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  border-right: 1px none #000;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-size: 20px;
+}
+
+.recherche_button {
+  display: block;
+  width: 25%;
+  height: 60px;
+  margin-right: 100px;
+  float: none;
+  clear: none;
+  border-right: 0px solid #000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #ffba51;
+  color: #333;
+  font-size: 20px;
+}
+
+.form-block {
+  position: relative;
+  top: 204px;
+  bottom: -47px;
+  display: block;
+  margin-top: 0px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section {
+  position: static;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  float: none;
+  background-image: -webkit-linear-gradient(135deg, #f2e783, #98db9c 26%, #54bb84 61%, #009466);
+  background-image: linear-gradient(315deg, #f2e783, #98db9c 26%, #54bb84 61%, #009466);
+}
+
+.section-2 {
+  background-color: #e7e7e7;
+}
+
+.row {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-style: dashed none none;
+  border-top-width: 1px;
+  border-top-color: #54bb84;
+}
+
+.column {
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 30px 35px 10px;
+  border: 1px none #000;
+}
+
+.tips_block {
+  display: block;
+  height: 250px;
+  border-style: none solid solid;
+  border-width: 1px 2px 2px;
+  border-color: #54bb84;
+  border-radius: 50px 50px 20px 20px;
+}
+
+.column-2 {
+  padding: 30px 35px 10px;
+  font-family: Varela, sans-serif;
+}
+
+.handshake_block {
+  height: 250px;
+  border-style: none solid solid;
+  border-width: 1px 2px 2px;
+  border-color: #54bb84;
+  border-radius: 50px 50px 20px 20px;
+}
+
+.column-3 {
+  padding: 30px 35px 10px;
+}
+
+.image-3 {
+  position: relative;
+  top: -27px;
+  display: block;
+  margin: 0px auto;
+  padding-top: 0px;
+}
+
+.tips_image {
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+.wine_image {
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.handshake_image {
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tips_text {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Varela, sans-serif;
+  text-align: center;
+}
+
+.handshake_text {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Varela, sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.heading-2 {
+  margin-top: 0px;
+}
+
+.heading-3 {
+  margin-top: 0px;
+}
+
+.heading-4 {
+  margin-top: 0px;
+  margin-bottom: 1px;
+  font-size: 20px;
+}
+
+.tips_title {
+  margin-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Varela, sans-serif;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.wine_title {
+  margin-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Varela, sans-serif;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.wine_text {
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.handshake_title {
+  padding-bottom: 10px;
+  font-family: Varela, sans-serif;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.wine_block {
+  height: 250px;
+  border-style: none solid solid;
+  border-width: 2px;
+  border-color: #54bb84;
+  border-radius: 50px 50px 20px 20px;
+}
+
+.utility-page-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.utility-page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.utility-page-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.text-block-8 {
+  display: none;
+}
+
+.text-block-9 {
+  display: none;
+}
+
+.success-message {
+  position: static;
+  overflow: visible;
+}
+
+.resultcolumn {
+  border-left: 1px dashed #000;
+}
+
+.price-1 {
+  padding-left: 30px;
+  font-family: Varela, sans-serif;
+}
+
+.checkboxprice1 {
+  margin-left: -20px;
+}
+
+.heading-5 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: Varela, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.price2 {
+  margin-left: 10px;
+  font-family: Varela, sans-serif;
+}
+
+.pricelabel2 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.row-2 {
+  margin-top: 20px;
+}
+
+.price3 {
+  margin-left: 10px;
+  padding-left: 20px;
+  font-family: Varela, sans-serif;
+}
+
+.pricelabel3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.heading-6 {
+  margin-top: 10px;
+  font-family: Varela, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.error-message {
+  position: static;
+  overflow: visible;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+.cuisine_checkbox1 {
+  margin-left: 10px;
+}
+
+.cuisine_checkbox2 {
+  margin-left: 10px;
+}
+
+.field-label {
+  font-family: Varela, sans-serif;
+}
+
+.field-label-2 {
+  font-family: Varela, sans-serif;
+}
+
+.cuisine_checkbox3 {
+  margin-left: 10px;
+}
+
+.field-label-3 {
+  font-family: Varela, sans-serif;
+}
+
+.heading-7 {
+  margin-top: 10px;
+  font-family: Varela, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.restrict_checkbox1 {
+  margin-left: 10px;
+}
+
+.field-label-4 {
+  font-family: Varela, sans-serif;
+}
+
+.checkbox-field {
+  margin-left: 10px;
+}
+
+.restrict_checkbox2 {
+  margin-left: 10px;
+  font-family: Varela, sans-serif;
+}
+
+.restrict_checkbox3 {
+  margin-left: 10px;
+  font-family: Varela, sans-serif;
+}
+
+.heading-8 {
+  margin-top: 10px;
+  font-family: Varela, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.heading-9 {
+  font-size: 30px;
+  line-height: 34px;
+}
+
+.div-block {
+  margin-top: 25px;
+}
+
+.titre_restaurant {
+  margin-top: 10px;
+  border-bottom: 1px none #000;
+  font-family: Varela, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.slide {
+  border-style: none;
+  border-radius: 20px;
+  background-image: url('../images/41993-das-loft-sofitel-19to1.jpeg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+
+.image-4 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.slide-2 {
+  border-radius: 20px;
+  background-image: url('../images/2c436799-46fc-363c-4ba8-95a99770da15.jpg');
+  background-position: 50% 97%;
+  background-size: cover;
+}
+
+.slider {
+  right: 0px;
+  width: auto;
+  height: 400px;
+  border: 1px none #000;
+  border-radius: 0px;
+}
+
+.div-block-2 {
+  margin-bottom: 20px;
+  border-style: none;
+}
+
+.div-block-3 {
+  height: 70px;
+  margin-top: 0px;
+}
+
+.containerfindepage {
+  height: 70px;
+}
+
+.textfindepage {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: Varela, sans-serif;
+  color: #757575;
+  font-weight: 600;
+  text-align: left;
+  text-transform: none;
+}
+
+.heading-10 {
+  margin-top: 10px;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.heading-11 {
+  margin-top: 0px;
+  font-family: Varela, sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.div-block-4 {
+  height: 300px;
+  background-image: url('../images/a66057b9aad0229142824145c6f37ef6.png');
+  background-position: 0px 0px;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+}
+
+.text-block-10 {
+  margin-top: 0px;
+  padding: 65px 50px;
+}
+
+.heading-12 {
+  margin-top: 10px;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.modal_connexion {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal_inscription {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.signupdiv {
+  position: static;
+  z-index: 999999;
+  width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.closelink {
+  display: block;
+  margin-top: -25px;
+  margin-right: -25px;
+  float: right;
+  font-family: Varela, sans-serif;
+  color: rgba(0, 0, 0, .5);
+}
+
+.heading-13 {
+  font-family: Varela, sans-serif;
+  color: #1abc9c;
+  text-align: center;
+}
+
+.text-field {
+  float: none;
+}
+
+.submit-button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #1abc9c;
+}
+
+.modal_conne {
+  position: absolute;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
+}
+
+.signindiv {
+  display: block;
+  width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.closelink2 {
+  display: block;
+  margin-top: -25px;
+  margin-right: -25px;
+  float: right;
+  font-family: Varela, sans-serif;
+  color: rgba(0, 0, 0, .5);
+}
+
+.heading-14 {
+  font-family: Varela, sans-serif;
+  color: #1abc9c;
+  text-align: center;
+}
+
+.submit-button-2 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #1abc9c;
+}
+
+html.w-mod-js *[data-ix="modalinterraction"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+html.w-mod-js *[data-ix="modalinterraction2"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 991px) {
+  .inscription_button {
+    padding: 20px;
+    border-style: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .connexion_button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    color: #333;
+    line-height: 20px;
+  }
+  .accueil_button {
+    position: relative;
+    display: block;
+    padding: 20px;
+    color: #333;
+    line-height: 20px;
+  }
+  .menu-button {
+    background-color: transparent;
+  }
+  .menu-button.w--open {
+    background-color: transparent;
+  }
+  .image {
+    position: static;
+  }
+  .icon {
+    color: #303030;
+  }
+}
