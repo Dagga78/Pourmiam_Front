@@ -1,24 +1,15 @@
-<!--<div class="modal_inscription" data-ix="modalinterraction">-->
-  <!--<div class="signupdiv w-clearfix"><a href="#" class="closelink" data-ix="closeinerraction2">Fermer X</a>-->
-    <!--<h1 class="heading-13">Inscriptions</h1>-->
-    <!--<div class="w-form">-->
-      <!--<form id="wf-form-SigninForm" name="wf-form-SigninForm" data-name="SigninForm"><label for="E-mail">E-mail :</label><input type="email" class="w-input" maxlength="256" name="E-mail" data-name="E-mail" placeholder="E-mail" id="E-mail" required=""><label for="lastname">Nom :</label><input type="text" class="text-field w-input" maxlength="256" name="lastname" data-name="lastname" placeholder="Entrer votre nom" id="lastname" required=""><label>Prénom :</label><input type="text" class="w-input" maxlength="256" name="firstname" data-name="firstname" placeholder="Entrer votre prénom" id="firstname" required=""><label for="Passwd">Mot de passe :</label><input type="password" class="w-input" maxlength="256" name="Passwd" data-name="Passwd" placeholder="Entrer votre mot de passe" id="Passwd" required=""><label for="Passwd-2">Vérification Mot de passe :</label><input type="password" class="w-input" maxlength="256" name="Passwd2" data-name="Passwd2" placeholder="Entrer votre mot de passe" id="Passwd-2" required=""><input type="submit" value="Je m&#x27;inscrit" data-wait="Un instant..." class="submit-button w-button"></form>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-<!--<div class="modal_connexion" data-ix="modalinterraction">-->
-  <!--<div class="signindiv w-clearfix"><a href="#" class="closelink2" data-ix="closeinterracion">Fermer X</a>-->
-    <!--<h1 class="heading-14">Connexion</h1>-->
-    <!--<div class="w-form">-->
-      <!--<form id="email-form-2" name="email-form-2" data-name="Email Form 2"><label for="E-mail-2">E-mail :</label><input type="email" class="w-input" maxlength="256" name="E-mail" data-name="E-mail" placeholder="Entrer votre E-mail" id="E-mail-2" required=""><label for="Passwd-3">Mot de passe</label><input type="password" class="w-input" maxlength="256" name="Passwd" data-name="Passwd" placeholder="Entrer votre mot de passe" id="Passwd-3" required=""><input type="submit" value="Connexion" data-wait="Un instant..." class="submit-button-2 w-button"></form>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
 <div class="sectionheader">
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbarpm w-nav">
-    <div class="containerheader w-container"><a href="index.html" class="logoimg w-nav-brand"><img src="../../assets/images/PourmiamTrans.png" width="90" height="60" srcset="../../assets/images/PourmiamTrans-p-500.png 500w, ../../assets/images/PourmiamTrans.png 945w" sizes="90px" class="logoimg"></a>
+    <div class="containerheader w-container"><a href="index.html" class="logoimg w-nav-brand"><img
+      src="../../assets/images/PourmiamTrans.png" width="90" height="60"
+      srcset="../../assets/images/PourmiamTrans-p-500.png 500w, ../../assets/images/PourmiamTrans.png 945w" sizes="90px"
+      class="logoimg"></a>
       <div class="text_logo">PourMiam&#x27;</div>
-      <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="accueil_button w-nav-link">Accueil</a><a href="#" class="connexion_button w-nav-link" data-ix="signininterraction">Connexion</a><a href="#" class="inscription_button w-nav-link" data-ix="signupinterraction">Je m&#x27;inscrit</a></nav>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction">Connexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction">Je m&#x27;inscrit</a>
+      </nav>
       <div class="menu-button w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
       </div>
@@ -32,7 +23,15 @@
   <div class="container-2 w-container">
     <div class="div_recherche">
       <div class="form-block w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="text" class="text_ville w-input" maxlength="256" name="Ville_recherche" data-name="Ville_recherche" placeholder="Indiquer votre ville..." id="Ville_recherche" required=""><input type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button w-button"></form>
+        <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="text"
+                                                                                           class="text_ville w-input"
+                                                                                           maxlength="256"
+                                                                                           name="Ville_recherche"
+                                                                                           data-name="Ville_recherche"
+                                                                                           placeholder="Indiquer votre ville..."
+                                                                                           id="Ville_recherche"
+                                                                                           required=""><input
+          type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button w-button"></form>
         <div class="success-message w-form-done">
           <div class="text-block-9">Thank you! Your submission has been received!</div>
         </div>
@@ -47,29 +46,46 @@
       <div class="column w-col w-col-4">
         <div class="tips_block"><img src="../../assets/images/money-3.png" width="80" class="tips_image">
           <div class="tips_title">Des réductions pour les utilisateurs</div>
-          <div class="tips_text">PourMiam&#x27; vous permet de bénéficier de réduction sur votre additions dans les enseigne en partenariat avec PourMiam&#x27; !</div>
+          <div class="tips_text">PourMiam&#x27; vous permet de bénéficier de réduction sur votre additions dans les
+            enseigne en partenariat avec PourMiam&#x27; !
+          </div>
         </div>
       </div>
       <div class="column-2 w-col w-col-4">
         <div class="wine_block"><img src="../../assets/images/wine.png" width="80" class="wine_image">
           <div class="wine_title">Trouver le meilleur endroit pour manger</div>
-          <div class="wine_text">Des quantités de photos des restaurant et plats ainsi que des avis sur les restaurants de notre communauté Française de voyageurs</div>
+          <div class="wine_text">Des quantités de photos des restaurant et plats ainsi que des avis sur les restaurants
+            de notre communauté Française de voyageurs
+          </div>
         </div>
       </div>
       <div class="column-3 w-col w-col-4">
         <div class="handshake_block"><img src="../../assets/images/handshake.png" width="80" class="handshake_image">
           <div class="handshake_title">Travaille avec les professionnels</div>
-          <div class="handshake_text">PourMiam&#x27; travaille avec les professionnels de la restauration afin de leur permettre une meilleur compréhension des envies de leur clientèles.</div>
+          <div class="handshake_text">PourMiam&#x27; travaille avec les professionnels de la restauration afin de leur
+            permettre une meilleur compréhension des envies de leur clientèles.
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="section">
-  <div class="div-block-3">
-    <div class="containerfindepage w-container">
-      <div class="textfindepage">PourMiam&#x27;</div>
+<footer>
+  <div class="section">
+    <div class="div-block-3">
+      <div class="containerfindepage w-container">
+        <div class="w-row">
+          <div class="w-col w-col-2">
+            <div></div>
+          </div>
+          <div class="w-col w-col-2"></div>
+          <div class="w-col w-col-2"></div>
+          <div class="w-col w-col-2"></div>
+          <div class="w-col w-col-2"></div>
+          <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"
+                                        class="link-2">Contactez-nous<br></a></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
+</footer>
