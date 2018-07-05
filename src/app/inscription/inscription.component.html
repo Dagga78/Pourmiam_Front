@@ -20,24 +20,27 @@
   <div class="div-block-5">
     <h1 class="heading-15">Inscriptions</h1>
     <div class="form-block-2 w-form">
-      <form id="email-form" name="email-form" data-name="Email Form" (ngSubmit)="onsubmit()" class="form-3">
+      <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
+        {{errorServer}}
+      </div>
+      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3" #inscriptionForm="ngForm" ngNativeValidate>
         <label for="E_mail">E-mail</label>
-        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="">
+        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="inscription.email">
         <div class="w-row">
           <div class="w-col w-col-6">
             <label for="Nom">Nom :</label>
-            <input type="text" class="w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="Entrer votre Nom" id="Nom" required="">
+            <input type="text" class="w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="Entrer votre Nom" id="Nom" required="" [(ngModel)]="inscription.lastname">
           </div>
           <div class="w-col w-col-6">
             <label for="Prenom">Prénom :</label>
-            <input type="text" class="w-input" maxlength="256" name="Prenom" data-name="Prenom" placeholder="Entrer votre Prénom" id="Prenom" required="">
+            <input type="text" class="w-input" maxlength="256" name="Prenom" data-name="Prenom" placeholder="Entrer votre Prénom" id="Prenom" required="" [(ngModel)]="inscription.firstname">
           </div>
         </div>
         <label for="Password">Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="">
+        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="Password">
         <label for="VPassword">Vérification Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword" placeholder="Re-entrer votre Mot de passe" id="VPassword" required="">
-        <input type="submit" value="Je m&#x27;inscrit" data-wait="Un instant..." class="submit-button-3 w-button">
+        <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword" placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword">
+        <input type="submit" value="Je m'inscrit" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
     </div>
   </div>

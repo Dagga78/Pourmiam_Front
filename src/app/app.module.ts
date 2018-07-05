@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import {PourmiamService} from './PourmiamService';
+import {HttpModule} from '@angular/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {Inscription} from './inscription/inscription';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,15 @@ import { InscriptionComponent } from './inscription/inscription.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    PourmiamService,
+    Inscription
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

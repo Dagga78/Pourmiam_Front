@@ -2,12 +2,8 @@ import {Injectable, isDevMode} from '@angular/core';
 import {Headers, RequestOptions, ConnectionBackend} from '@angular/http';
 import {Http} from '@angular/http';
 
-import {Observable} from 'rxjs';
-
 import {environment} from '../environments/environment';
 import {Inscription} from './inscription/inscription';
-import {Login} from './login/login';
-import {promise} from 'selenium-webdriver';
 
 @Injectable()
 export class PourmiamService {
@@ -26,7 +22,7 @@ export class PourmiamService {
   }
 
   createAccount(formdata: Inscription): Promise<any> {
-    // console.log('createAccount() formdata : ' + formdata.toString());
+    console.log('createAccount() formdata : ' + formdata.toString());
     const url = `${this.baseUrl}authent/init`;
     return this.http
       .post(url, formdata, {headers: this.options.headers})
