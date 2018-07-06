@@ -8,15 +8,22 @@ import {
 } from '@angular/router';
 import {AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators} from '@angular/forms';
 
+const FIRST_DIV = 1;
+const MAIL_DIV = 2;
+
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
 })
+
+
 export class InscriptionComponent implements OnInit {
   public inscription = new Inscription;
   public errorServer = '';				// Affiche les erreurs provenant de l'API
   public Password = '';				// Affiche les erreurs provenant de l'API
   public VPassword = '';				// Affiche les erreurs provenant de l'API
+  public showDiv = FIRST_DIV;
+
   constructor(
     private pourmiamService: PourmiamService,
   ) {
@@ -40,6 +47,7 @@ export class InscriptionComponent implements OnInit {
     } else {
       this.errorServer = 'Les mots de passe ne sont pas identique';
     }
+    this.showDiv = MAIL_DIV;
   }
 
 }

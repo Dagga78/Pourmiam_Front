@@ -16,7 +16,7 @@ import {Inscription} from './inscription/inscription';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    InscriptionComponent
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,

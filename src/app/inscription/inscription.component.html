@@ -17,7 +17,7 @@
   </div>
 </div>
 <div class="container-4 w-container">
-  <div class="div-block-5">
+  <div class="div-block-5" [hidden]="showDiv != 1">
     <h1 class="heading-15">Inscriptions</h1>
     <div class="form-block-2 w-form">
       <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
@@ -42,6 +42,18 @@
         <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword" placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword">
         <input type="submit" value="Je m'inscrit" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
+    </div>
+  </div>
+</div>
+<div class="container-4 w-container">
+  <div class="div-block-5" [hidden]="showDiv != 2">
+    <h1 class="heading-15"><strong>Vous y êtes presque</strong><br></h1>
+    <div class="w-row">
+      <div class="column-4 w-col w-col-6">
+        <div class="div-block-6"><img src="images/5b30ad01d4bf81203f0b2c3b_btn-mail3.png" class="image-6"></div>
+      </div>
+      <div class="w-col w-col-6">
+        <div class="text-block-12">Un e-mail de confirmation vous a été <br>envoyé à : {{inscription.email}}<br></div><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact(Je n'ai pas recus de mail)" class="link">Je n&#x27;ai pas reçu d&#x27;e-mail</a></div>
     </div>
   </div>
 </div>
