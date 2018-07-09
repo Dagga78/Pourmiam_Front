@@ -22,11 +22,14 @@
   <div class="div-block-5">
     <h1 class="heading-15">Connexions</h1>
     <div class="form-block-2 w-form">
-      <form id="email-form" name="email-form" data-name="Email Form" (ngSubmit)="onSubmit()" class="form-3">
+      <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
+        {{errorServer}}
+      </div>
+      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3" #loginForm="ngForm" ngNativeValidate>
         <label for="E_mail">E-mail</label>
-        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="">
+        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="" [(ngModel)]="login.email">
         <label for="Password">Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="">
+        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="login.password">
         <input type="submit" value="Connexion" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
     </div>
