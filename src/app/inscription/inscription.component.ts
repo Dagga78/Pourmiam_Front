@@ -46,7 +46,7 @@ export class InscriptionComponent implements OnInit {
             this.errorServer = error;
           });
     } else {
-      this.errorServer = 'Les mots de passe ne sont pas identique';
+      this.errorServer = 'Les mots de passe ne sont pas identiques';
     }
   }
 
