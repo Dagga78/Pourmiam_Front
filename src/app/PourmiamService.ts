@@ -4,6 +4,7 @@ import {Http} from '@angular/http';
 
 import {environment} from '../environments/environment';
 import {Inscription} from './inscription/inscription';
+import {Login} from './login/login';
 
 @Injectable()
 export class PourmiamService {
@@ -33,6 +34,20 @@ export class PourmiamService {
       })
       .catch(this.handleError);
   }
+
+  login(formdata: Login): Promise<any> {
+    console.log('login() formdata : ' + formdata.toString());
+    const url = `${this.baseUrl}authent/login`;
+    return this.http
+      .post(url, formdata, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('CobizService createAccount() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
+  }
+
 
   //    Gere la recuperation des message d'ereur provenant de l'API
   private handleError(error: any): Promise<any> {

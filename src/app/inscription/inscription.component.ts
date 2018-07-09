@@ -20,8 +20,8 @@ const MAIL_DIV = 2;
 export class InscriptionComponent implements OnInit {
   public inscription = new Inscription;
   public errorServer = '';				// Affiche les erreurs provenant de l'API
-  public Password = '';				// Affiche les erreurs provenant de l'API
-  public VPassword = '';				// Affiche les erreurs provenant de l'API
+  public Password = '';
+  public VPassword = '';
   public showDiv = FIRST_DIV;
 
   constructor(
@@ -46,9 +46,8 @@ export class InscriptionComponent implements OnInit {
             this.errorServer = error;
           });
     } else {
-      this.errorServer = 'Les mots de passe ne sont pas identiques';
+      this.errorServer = 'Les mots de passe ne sont pas identique';
     }
-
   }
 
 }
