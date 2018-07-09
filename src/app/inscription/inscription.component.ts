@@ -39,15 +39,16 @@ export class InscriptionComponent implements OnInit {
         .then(response => {
             this.errorServer = '';
             console.log('InscriptionComponent onsubmit() response = ' + response);
+            this.showDiv = MAIL_DIV;
           },
           error => {
             console.log('InscriptionComponent onSubmit() error = ' + error);
             this.errorServer = error;
           });
     } else {
-      this.errorServer = 'Les mots de passe ne sont pas identique';
+      this.errorServer = 'Les mots de passe ne sont pas identiques';
     }
-    this.showDiv = MAIL_DIV;
+
   }
 
 }
