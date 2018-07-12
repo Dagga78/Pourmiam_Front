@@ -26,10 +26,25 @@ export class InscriptionComponent implements OnInit {
 
   constructor(
     private pourmiamService: PourmiamService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
+    this.route.params.subscribe((params) => {
+      // console.log("InscriptionComponent token = " + params.token);
+      if (params.token !== undefined) {
+        this.pourmiamService.confirmAccount(params.token)
+          .then(response => {
+              this.errorServer = '';
+              this.router.navigate(['']);
+            },
+            error => {
+              this.errorServer = error;
+            });
+      }
+    });
   }
 
   onSubmit() {

@@ -29,10 +29,41 @@ export class PourmiamService {
       .post(url, formdata, {headers: this.options.headers})
       .toPromise()
       .then(response => {
-        console.log('CobizService createAccount() response : ', response);
+        console.log('PourmiamService createAccount() response : ', response);
         return;
       })
       .catch(this.handleError);
+  }
+
+  //    Confirmation d'inscription : le token est envoyé dans le mail d'inscription
+  confirmAccount(token: string): Promise<any> {
+    // console.log('confirmAccount() token : ' + token);
+    const url = `${this.baseUrl}authent/init/${token}/confirm`;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('PourmiamService confirmAccount() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
+  }
+
+  //    Ajoute l'authent dans les headers
+  private setAuthent(token: string) {
+    // console.log('Pourmiam setAuthent() token : ', token);
+    this.options.headers.append('Authorization', token);
+
+  }
+
+  private getAuthent() {
+    console.log('Pourmiam getAuthent() token : ', this.options.headers.get('Authorization'));
+    return this.options.headers.get('Authorization');
+  }
+
+  // Retire l'authent des headers
+  unsetAuthent() {
+    this.options.headers.delete('Authorization');
   }
 
   login(formdata: Login): Promise<any> {
@@ -42,7 +73,9 @@ export class PourmiamService {
       .post(url, formdata, {headers: this.options.headers})
       .toPromise()
       .then(response => {
-        console.log('CobizService createAccount() response : ', response);
+        console.log('PourmiamService createAccount() response : ', response.json());
+        this.setAuthent(response.json().token);
+        console.log(this.options.headers.get('Authorization'));
         return;
       })
       .catch(this.handleError);
