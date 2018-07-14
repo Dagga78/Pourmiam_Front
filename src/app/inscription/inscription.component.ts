@@ -23,6 +23,8 @@ export class InscriptionComponent implements OnInit {
   public Password = '';
   public VPassword = '';
   public showDiv = FIRST_DIV;
+  public ShowConnexion = 0;
+  private $auth;
 
   constructor(
     private pourmiamService: PourmiamService,
@@ -32,19 +34,22 @@ export class InscriptionComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe((params) => {
-      // console.log("InscriptionComponent token = " + params.token);
-      if (params.token !== undefined) {
-        this.pourmiamService.confirmAccount(params.token)
-          .then(response => {
-              this.errorServer = '';
-              this.router.navigate(['']);
-            },
-            error => {
-              this.errorServer = error;
-            });
-      }
-    });
+    this.getauthent();
+  }
+
+  getauthent() {
+    this.$auth = this.pourmiamService.getAuthent();
+    console.log(this.$auth);
+    if (this.$auth !== null) {
+      this.ShowConnexion = 1;
+    }
+  }
+
+  disconnect() {
+    this.$auth = this.pourmiamService.unsetAuthent();
+    console.log(this.$auth);
+    this.ShowConnexion = 0;
+    this.router.navigate(['']);
   }
 
   onSubmit() {

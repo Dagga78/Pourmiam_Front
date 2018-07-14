@@ -7,8 +7,10 @@
       <div class="text_logo">PourMiam&#x27;</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
         <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
-        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction">Connexion</a>
-        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction">Je m&#x27;inscrit</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
+        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
       </nav>
       <div class="menu-button w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -58,7 +60,7 @@
   </div>
 </div>
 <footer>
-  <div class="section2">
+  <div class="section">
     <div class="div-block-3">
       <div class="containerfindepage w-container">
         <div class="w-row">
@@ -69,9 +71,11 @@
           <div class="w-col w-col-2"></div>
           <div class="w-col w-col-2"></div>
           <div class="w-col w-col-2"></div>
-          <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact" class="link-2">Contactez-nous<br></a></div>
+          <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"
+                                        class="link-2">Contactez-nous<br></a></div>
         </div>
       </div>
     </div>
   </div>
 </footer>
+

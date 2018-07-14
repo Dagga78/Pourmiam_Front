@@ -10,6 +10,7 @@ import {PourmiamService} from './PourmiamService';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Inscription} from './inscription/inscription';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {Inscription} from './inscription/inscription';
     HomeComponent,
     LoginComponent,
     InscriptionComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,

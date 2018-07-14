@@ -9,6 +9,7 @@ import {Login} from './login/login';
 @Injectable()
 export class PourmiamService {
   private baseUrl;
+  private $auth;
   private options = new RequestOptions({
     headers: new Headers({
       'Content-Type': 'application/json',
@@ -50,13 +51,13 @@ export class PourmiamService {
   }
 
   //    Ajoute l'authent dans les headers
-  private setAuthent(token: string) {
+  setAuthent(token: string) {
     // console.log('Pourmiam setAuthent() token : ', token);
     this.options.headers.append('Authorization', token);
 
   }
 
-  private getAuthent() {
+  getAuthent() {
     console.log('Pourmiam getAuthent() token : ', this.options.headers.get('Authorization'));
     return this.options.headers.get('Authorization');
   }

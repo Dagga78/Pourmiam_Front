@@ -1,24 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
 import {PourmiamService} from '../PourmiamService';
-import {isNodeFlagSet} from 'tslint';
-
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-profil',
+  templateUrl: './profil.component.html',
 })
-
-
-export class HomeComponent implements OnInit {
+export class ProfilComponent implements OnInit {
   public ShowConnexion = 0;
   private $auth;
 
-  constructor(
-    private pourmiamService: PourmiamService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
+  constructor(private pourmiamService: PourmiamService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -39,5 +32,5 @@ export class HomeComponent implements OnInit {
     this.ShowConnexion = 0;
     this.router.navigate(['']);
   }
-}
 
+}

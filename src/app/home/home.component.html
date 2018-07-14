@@ -7,10 +7,14 @@
       <div class="text_logo">PourMiam&#x27;</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
         <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
-        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
-        <a routerLink="" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
-        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
-        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction"
+           [hidden]='ShowConnexion != 1'>Mon profil</a>
+        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link"
+           data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
       </nav>
       <div class="menu-button w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -85,3 +89,4 @@
     </div>
   </div>
 </footer>
+

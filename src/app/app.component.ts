@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {PourmiamService} from './PourmiamService';
 
 @Component({
   selector: 'app-root',
@@ -7,3 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 }
+
+

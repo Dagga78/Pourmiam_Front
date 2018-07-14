@@ -10,6 +10,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   public login = new Login;
   public errorServer = '';				// Affiche les erreurs provenant de l'API
+  public ShowConnexion = 0;
+  private $auth;
 
   constructor(
     private pourmiamService: PourmiamService,
@@ -19,6 +21,22 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getauthent();
+  }
+
+  getauthent() {
+    this.$auth = this.pourmiamService.getAuthent();
+    console.log(this.$auth);
+    if (this.$auth !== null) {
+      this.ShowConnexion = 1;
+    }
+  }
+
+  disconnect() {
+    this.$auth = this.pourmiamService.unsetAuthent();
+    console.log(this.$auth);
+    this.ShowConnexion = 0;
+    this.router.navigate(['']);
   }
 
   onSubmit() {
