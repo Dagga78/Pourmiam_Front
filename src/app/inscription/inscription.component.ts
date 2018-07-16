@@ -10,6 +10,8 @@ import {AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators} from '
 
 const FIRST_DIV = 1;
 const MAIL_DIV = 2;
+const CONFIRM_DIV = 3;
+const DELAI_SHOW_CONFIRM = 5000;		//
 
 @Component({
   selector: 'app-inscription',
@@ -25,6 +27,7 @@ export class InscriptionComponent implements OnInit {
   public showDiv = FIRST_DIV;
   public ShowConnexion = 0;
   private $auth;
+  private timer;
 
   constructor(
     private pourmiamService: PourmiamService,
@@ -35,6 +38,23 @@ export class InscriptionComponent implements OnInit {
 
   ngOnInit() {
     this.getauthent();
+    this.route.params.subscribe((params) => {
+      // console.log("InscriptionComponent token = " + params.token);
+      if (params.token !== undefined) {
+        this.pourmiamService.confirmAccount(params.token)
+          .then(response => {
+              this.errorServer = '';
+              this.showDiv = CONFIRM_DIV;
+              this.timer = setTimeout(() => {
+                this.router.navigate(['/login']);
+              }, DELAI_SHOW_CONFIRM);
+            },
+            error => {
+              this.errorServer = error;
+            });
+      }
+    });
+
   }
 
   getauthent() {

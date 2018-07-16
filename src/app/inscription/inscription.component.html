@@ -7,10 +7,14 @@
       <div class="text_logo">PourMiam&#x27;</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
         <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
-        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
-        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
-        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
-        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
+        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link"
+           data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
       </nav>
       <div class="menu-button w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -25,23 +29,30 @@
       <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
         {{errorServer}}
       </div>
-      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3" #inscriptionForm="ngForm" ngNativeValidate>
+      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3"
+            #inscriptionForm="ngForm" ngNativeValidate>
         <label for="E_mail">E-mail</label>
-        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="inscription.email">
+        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail"
+               placeholder="Entrer votre e-mail" id="E_mail" required=""
+               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="inscription.email">
         <div class="w-row">
           <div class="w-col w-col-6">
             <label for="Nom">Nom :</label>
-            <input type="text" class="w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="Entrer votre Nom" id="Nom" required="" [(ngModel)]="inscription.lastname">
+            <input type="text" class="w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="Entrer votre Nom"
+                   id="Nom" required="" [(ngModel)]="inscription.lastname">
           </div>
           <div class="w-col w-col-6">
             <label for="Prenom">Prénom :</label>
-            <input type="text" class="w-input" maxlength="256" name="Prenom" data-name="Prenom" placeholder="Entrer votre Prénom" id="Prenom" required="" [(ngModel)]="inscription.firstname">
+            <input type="text" class="w-input" maxlength="256" name="Prenom" data-name="Prenom"
+                   placeholder="Entrer votre Prénom" id="Prenom" required="" [(ngModel)]="inscription.firstname">
           </div>
         </div>
         <label for="Password">Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="Password">
+        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password"
+               placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="Password">
         <label for="VPassword">Vérification Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword" placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword">
+        <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword"
+               placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword">
         <input type="submit" value="Je m'inscris" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
     </div>
@@ -52,11 +63,21 @@
     <h1 class="heading-15"><strong>Vous y êtes presque</strong><br></h1>
     <div class="w-row">
       <div class="column-4 w-col w-col-6">
-        <div class="div-block-6"><img src="../../assets/images/5b30ad01d4bf81203f0b2c3b_btn-mail3.png" class="image-6"></div>
+        <div class="div-block-6"><img src="../../assets/images/5b30ad01d4bf81203f0b2c3b_btn-mail3.png" class="image-6">
+        </div>
       </div>
       <div class="w-col w-col-6">
-        <div class="text-block-12">Un e-mail de confirmation vous a été envoyé à : {{inscription.email}} (Celà peut prendre quelque minute)</div><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact(Je n'ai pas recus de mail)" class="link">Je n&#x27;ai pas reçu d&#x27;e-mail</a></div>
+        <div class="text-block-12">Un e-mail de confirmation vous a été envoyé à : {{inscription.email}} (Celà peut
+          prendre quelque minute)
+        </div>
+        <a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact(Je n'ai pas recus de mail)" class="link">Je
+          n&#x27;ai pas reçu d&#x27;e-mail</a></div>
     </div>
+  </div>
+</div>
+<div class="container-4 w-container">
+  <div class="div-block-5" [hidden]="showDiv != 3">
+    <h1 class="heading-15"><strong>Félicitation vous êtes à présent inscrit a PourMiam</strong><br></h1>
   </div>
 </div>
 <footer>

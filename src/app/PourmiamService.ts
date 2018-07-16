@@ -41,7 +41,7 @@ export class PourmiamService {
     // console.log('confirmAccount() token : ' + token);
     const url = `${this.baseUrl}authent/init/${token}/confirm`;
     return this.http
-      .get(url, {headers: this.options.headers})
+      .post(url, {headers: this.options.headers})
       .toPromise()
       .then(response => {
         console.log('PourmiamService confirmAccount() response : ', response);

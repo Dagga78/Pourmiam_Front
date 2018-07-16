@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'inscription', component: InscriptionComponent},
+  {path: 'inscription/:token/confirm', component: InscriptionComponent},
   {path: 'profil', component: ProfilComponent}
 ];
 
