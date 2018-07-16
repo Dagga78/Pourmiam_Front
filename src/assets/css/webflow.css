@@ -563,6 +563,8 @@ textarea.w-select {
 }
 .w-col-6 {
   width: 50%;
+  padding-right: 30px;
+  padding-left: 50px;
 }
 .w-col-7 {
   width: 58.33333333%;
@@ -581,6 +583,11 @@ textarea.w-select {
 }
 .w-col-12 {
   width: 100%;
+}
+.w-col-13 {
+  width: 50%;
+  padding-right: 50px;
+  padding-left: 30px;
 }
 .w-hidden-main {
   display: none !important;

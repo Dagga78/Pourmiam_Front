@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PourmiamService} from '../PourmiamService';
 import {Router} from '@angular/router';
+import {Profil} from './Module/profil';
+
 
 @Component({
   selector: 'app-profil',
@@ -9,6 +11,8 @@ import {Router} from '@angular/router';
 export class ProfilComponent implements OnInit {
   public ShowConnexion = 0;
   private $auth;
+  public User = new Profil();
+  private errorServer = '';
 
   constructor(private pourmiamService: PourmiamService,
               private router: Router) {
@@ -16,6 +20,8 @@ export class ProfilComponent implements OnInit {
 
   ngOnInit() {
     this.getauthent();
+    this.pourmiamService.getUser();
+    this.userlist();
   }
 
   getauthent() {
@@ -32,5 +38,18 @@ export class ProfilComponent implements OnInit {
     this.ShowConnexion = 0;
     this.router.navigate(['']);
   }
+
+  public userlist() {
+    this.pourmiamService.getUser()
+      .then(response => {
+        this.errorServer = '';
+        this.User = response;
+        console.log('userlist Response() response = ', this.User);
+      }, error => {
+        console.log('listactivite listactivite() error = ' + error);
+        this.errorServer = error;
+      });
+  }
+
 
 }

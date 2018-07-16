@@ -82,6 +82,19 @@ export class PourmiamService {
       .catch(this.handleError);
   }
 
+  getUser(): Promise<any> {
+    const url = `${this.baseUrl}/user`;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        const jsonResp = response.json();
+        console.log('getUser() jsonResp : ', jsonResp);
+        return jsonResp;
+      })
+      .catch(this.handleError);
+  }
+
 
   //    Gere la recuperation des message d'ereur provenant de l'API
   private handleError(error: any): Promise<any> {
