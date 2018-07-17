@@ -773,7 +773,6 @@
 }
 
 .container-4 {
-  display: block;
   margin-top: 100px;
   margin-bottom: 100px;
   background-color: transparent;
@@ -882,6 +881,15 @@
   border-left: 3px solid #1abc9c;
   background-color: #d9f3ee;
 }
+
+.div-block-7 {
+  width: 700px;
+  margin: 70px auto 10px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  box-shadow: -1px 1px 2px -1px #000;
+}
+
 
 .column-4 {
   padding-bottom: 40px;

@@ -51,5 +51,9 @@ export class ProfilComponent implements OnInit {
       });
   }
 
+  public changepassword() {
+    this.router.navigate(['/login']);
+  }
+
 
 }

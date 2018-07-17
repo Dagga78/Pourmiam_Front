@@ -11,7 +11,7 @@ import {AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators} from '
 const FIRST_DIV = 1;
 const MAIL_DIV = 2;
 const CONFIRM_DIV = 3;
-const DELAI_SHOW_CONFIRM = 5000;		//
+const DELAI_SHOW_CONFIRM = 3;		//
 
 @Component({
   selector: 'app-inscription',
@@ -24,7 +24,7 @@ export class InscriptionComponent implements OnInit {
   public errorServer = '';				// Affiche les erreurs provenant de l'API
   public Password = '';
   public VPassword = '';
-  public showDiv = FIRST_DIV;
+  public showDiv = CONFIRM_DIV;
   public ShowConnexion = 0;
   private $auth;
   private timer;
