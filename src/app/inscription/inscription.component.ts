@@ -24,7 +24,7 @@ export class InscriptionComponent implements OnInit {
   public errorServer = '';				// Affiche les erreurs provenant de l'API
   public Password = '';
   public VPassword = '';
-  public showDiv = CONFIRM_DIV;
+  public showDiv = FIRST_DIV;
   public ShowConnexion = 0;
   private $auth;
   private timer;
