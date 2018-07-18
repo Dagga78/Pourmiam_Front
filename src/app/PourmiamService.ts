@@ -5,6 +5,8 @@ import {Http} from '@angular/http';
 import {environment} from '../environments/environment';
 import {Inscription} from './inscription/inscription';
 import {Login} from './login/login';
+import {promise} from 'selenium-webdriver';
+import {Email} from './forgotpassword/email';
 
 @Injectable()
 export class PourmiamService {
@@ -48,6 +50,20 @@ export class PourmiamService {
         return;
       })
       .catch(this.handleError);
+  }
+
+  createResetPassord(formdata: Email): Promise<any> {
+    console.log('createResetPassord');
+    const url = `${this.baseUrl}authent/reset`;
+    return this.http
+      .post(url, formdata, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('PourmiamService confirmAccount() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
+
   }
 
   //    Ajoute l'authent dans les headers

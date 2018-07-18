@@ -792,6 +792,7 @@
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: rgba(0, 0, 0, .05);
+  height: 100%;
 }
 
 .form-2 {
@@ -845,6 +846,20 @@
   padding-bottom: 30px;
 }
 
+.footer2 {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.w-form2 {
+  margin: 20px 60px 15px;
+}
+
 .text-block-11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -889,7 +904,6 @@
   background-color: #fff;
   box-shadow: -1px 1px 2px -1px #000;
 }
-
 
 .column-4 {
   padding-bottom: 40px;

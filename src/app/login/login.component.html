@@ -7,10 +7,14 @@
       <div class="text_logo">PourMiam&#x27;</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
         <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
-        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
-        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
-        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
-        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link" data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Mon profil</a>
+        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link"
+           data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
       </nav>
       <div class="menu-button w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -25,13 +29,17 @@
       <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
         {{errorServer}}
       </div>
-      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3" #loginForm="ngForm" ngNativeValidate>
+      <form id="email-form" name="email-form" data-name="Email Form" (submit)='onSubmit()' class="form-3"
+            #loginForm="ngForm" ngNativeValidate>
         <label for="E_mail">E-mail</label>
-        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail" placeholder="Entrer votre e-mail" id="E_mail" required="" [(ngModel)]="login.email">
+        <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail"
+               placeholder="Entrer votre e-mail" id="E_mail" required="" [(ngModel)]="login.email">
         <label for="Password">Mot de passe :</label>
-        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password" placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="login.password">
+        <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password"
+               placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="login.password">
         <input type="submit" value="Connexion" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
+      <a routerLink="/forgotpassword" routerLinkActive="active" style="margin-left: 60px">Mot de passe oublié</a>
     </div>
   </div>
 </div>
