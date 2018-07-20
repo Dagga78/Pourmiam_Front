@@ -1,11 +1,11 @@
 export class Restaurant {
-  idRestaurant: number;
+  idRestaurant: string;
   name: string;
   Adresse: string;
   Zipcode: string;
-  city: number;
-  positif: number;
-  negatif: number;
+  city: string;
+  positif: string;
+  negatif: string;
 
   toString() {
     return ('idRestaurant = ' + this.idRestaurant + '\n' +

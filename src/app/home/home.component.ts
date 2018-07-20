@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   private $auth;
   public $ville;
   public errorServer = '';
+  public listrestaurant: Restaurant[];
 
   constructor(
     private pourmiamService: PourmiamService,
@@ -48,13 +49,18 @@ export class HomeComponent implements OnInit {
   searchRestaurant() {
     this.pourmiamService.getListOfRestaurant(this.$ville)
       .then(response => {
-          console.log('getListOfRestaurant onsubmit() response = ' + response);
+          this.listrestaurant = response;
+          console.log('getListOfRestaurant onsubmit() response = ' + this.listrestaurant);
           this.router.navigate(['/restaurant']);
         },
         error => {
           // console.log('LoginComponent onSubmit() error = ' + error);
           this.errorServer = error;
         });
+  }
+
+  getlistrestaurant() {
+    return this.listrestaurant;
   }
 }
 

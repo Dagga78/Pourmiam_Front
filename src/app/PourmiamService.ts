@@ -13,7 +13,6 @@ import {Email} from './forgotpassword/email';
 export class PourmiamService {
   private baseUrl;
   private $auth;
-  public listrestaurant: Restaurant[];
   private options = new RequestOptions({
     headers: new Headers({
       'Content-Type': 'application/json',
@@ -119,10 +118,9 @@ export class PourmiamService {
       .get(url, {headers: this.options.headers})
       .toPromise()
       .then(response => {
-        console.log('getListOfRestaurant() listrestaurant : ', response);
-        this.listrestaurant = response.json();
-        console.log('getListOfRestaurant() listrestaurant : ', this.listrestaurant);
-        return this.listrestaurant;
+        const jsonResp = response.json();
+        console.log('listactivite() jsonResp : ', jsonResp);
+        return jsonResp;
       })
       .catch(this.handleError);
   }

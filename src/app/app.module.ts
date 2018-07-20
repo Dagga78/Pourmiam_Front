@@ -13,6 +13,7 @@ import {Inscription} from './inscription/inscription';
 import { ProfilComponent } from './profil/profil.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import {Restaurant} from './Module/Restaurant';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
   ],
   providers: [
     PourmiamService,
-    Inscription
+    Inscription,
+    HomeComponent,
+    Restaurant
   ],
   bootstrap: [AppComponent]
 })
