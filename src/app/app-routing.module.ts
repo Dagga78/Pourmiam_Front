@@ -6,6 +6,7 @@ import {LoginComponent} from './login/login.component';
 import {InscriptionComponent} from './inscription/inscription.component';
 import {ProfilComponent} from './profil/profil.component';
 import {ForgotpasswordComponent} from './forgotpassword/forgotpassword.component';
+import {RestaurantComponent} from './restaurant/restaurant.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'inscription', component: InscriptionComponent},
   {path: 'inscription/:token/confirm', component: InscriptionComponent},
   {path: 'profil', component: ProfilComponent},
-  {path: 'forgotpassword', component: ForgotpasswordComponent}
+  {path: 'forgotpassword', component: ForgotpasswordComponent},
+  {path: 'profil', component: ProfilComponent},
+  {path: 'restaurant', component: RestaurantComponent}
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@ import {Http} from '@angular/http';
 import {environment} from '../environments/environment';
 import {Inscription} from './inscription/inscription';
 import {Login} from './login/login';
+import {Restaurant} from './Module/Restaurant';
 import {promise} from 'selenium-webdriver';
 import {Email} from './forgotpassword/email';
 
@@ -12,6 +13,7 @@ import {Email} from './forgotpassword/email';
 export class PourmiamService {
   private baseUrl;
   private $auth;
+  public listrestaurant: Restaurant[];
   private options = new RequestOptions({
     headers: new Headers({
       'Content-Type': 'application/json',
@@ -111,8 +113,21 @@ export class PourmiamService {
       .catch(this.handleError);
   }
 
+  getListOfRestaurant(ville: string): Promise<any> {
+    const url = `${this.baseUrl}/restaurant?city=` + ville;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('getListOfRestaurant() listrestaurant : ', response);
+        this.listrestaurant = response.json();
+        console.log('getListOfRestaurant() listrestaurant : ', this.listrestaurant);
+        return this.listrestaurant;
+      })
+      .catch(this.handleError);
+  }
 
-  //    Gere la recuperation des message d'ereur provenant de l'API
+//    Gere la recuperation des message d'ereur provenant de l'API
   private handleError(error: any): Promise<any> {
     console.log('An error occurred : ', error);
     if (error.status >= 400 && error.status < 500 && error.status !== 405) {

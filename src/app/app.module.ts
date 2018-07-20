@@ -11,6 +11,7 @@ import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Inscription} from './inscription/inscription';
 import { ProfilComponent } from './profil/profil.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     InscriptionComponent,
     ProfilComponent,
     ForgotpasswordComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,

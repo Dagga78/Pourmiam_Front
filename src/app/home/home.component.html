@@ -9,7 +9,8 @@
         <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
         <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link"
            data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
-        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link" data-ix="signininterraction"
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction"
            [hidden]='ShowConnexion != 1'>Mon profil</a>
         <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link"
            data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
@@ -24,20 +25,17 @@
 </div>
 <div class="section_recherche">
   <div class="container-1 w-container">
-    <h1 class="titre-acceuil">Trouver mon restaurant en quelque clique seulement ?</h1>
+    <h1 class="titre-acceuil">Trouver mon restaurant en quelque clics seulement ?</h1>
   </div>
   <div class="container-2 w-container">
     <div class="div_recherche">
       <div class="form-block w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="text"
-                                                                                           class="text_ville w-input"
-                                                                                           maxlength="256"
-                                                                                           name="Ville_recherche"
-                                                                                           data-name="Ville_recherche"
-                                                                                           placeholder="Indiquer votre ville..."
-                                                                                           id="Ville_recherche"
-                                                                                           required=""><input
-          type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button w-button"></form>
+        <form id="email-form" name="email-form" data-name="Email Form" class="form" (submit)="searchRestaurant()" #restaurantForm="ngForm" ngNativeValidate>
+          <input type="text" class="text_ville w-input" maxlength="256" name="Ville_recherche"
+                 data-name="Ville_recherche" placeholder="Indiquer le code postal..." id="Ville_recherche"
+                 required="" [(ngModel)]="$ville">
+          <input type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button w-button">
+        </form>
       </div>
     </div>
   </div>
