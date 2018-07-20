@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {InscriptionComponent} from './inscription/inscription.component';
 import {ProfilComponent} from './profil/profil.component';
+import {RestaurantComponent} from './restaurant/restaurant.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'inscription', component: InscriptionComponent},
   {path: 'inscription/:token/confirm', component: InscriptionComponent},
-  {path: 'profil', component: ProfilComponent}
+  {path: 'profil', component: ProfilComponent},
+  {path: 'restaurant', component: RestaurantComponent}
 ];
 
 @NgModule({

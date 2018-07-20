@@ -11,6 +11,7 @@ import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Inscription} from './inscription/inscription';
 import { ProfilComponent } from './profil/profil.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProfilComponent } from './profil/profil.component';
     LoginComponent,
     InscriptionComponent,
     ProfilComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,

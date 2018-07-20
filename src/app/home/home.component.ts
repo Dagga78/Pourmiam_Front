@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PourmiamService} from '../PourmiamService';
 import {isNodeFlagSet} from 'tslint';
+import {Restaurant} from '../Module/Restaurant';
+import {Profil} from '../profil/Module/profil';
+import {forEach} from '@angular/router/src/utils/collection';
 
 
 @Component({
@@ -13,6 +16,8 @@ import {isNodeFlagSet} from 'tslint';
 export class HomeComponent implements OnInit {
   public ShowConnexion = 0;
   private $auth;
+  public $ville;
+  public errorServer = '';
 
   constructor(
     private pourmiamService: PourmiamService,
@@ -38,6 +43,18 @@ export class HomeComponent implements OnInit {
     console.log(this.$auth);
     this.ShowConnexion = 0;
     this.router.navigate(['']);
+  }
+
+  searchRestaurant() {
+    this.pourmiamService.getListOfRestaurant(this.$ville)
+      .then(response => {
+          console.log('getListOfRestaurant onsubmit() response = ' + response);
+          this.router.navigate(['/restaurant']);
+        },
+        error => {
+          // console.log('LoginComponent onSubmit() error = ' + error);
+          this.errorServer = error;
+        });
   }
 }
 
