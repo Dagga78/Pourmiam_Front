@@ -47,20 +47,8 @@ export class HomeComponent implements OnInit {
   }
 
   searchRestaurant() {
-    this.pourmiamService.getListOfRestaurant(this.$ville)
-      .then(response => {
-          this.listrestaurant = response;
-          console.log('getListOfRestaurant onsubmit() response = ' + this.listrestaurant);
-          this.router.navigate(['/restaurant']);
-        },
-        error => {
-          // console.log('LoginComponent onSubmit() error = ' + error);
-          this.errorServer = error;
-        });
+    this.router.navigate(['/restaurant/' + this.$ville]);
   }
 
-  getlistrestaurant() {
-    return this.listrestaurant;
-  }
 }
 

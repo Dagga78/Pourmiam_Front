@@ -33,7 +33,7 @@
         <form id="email-form" name="email-form" data-name="Email Form" class="form" (submit)="searchRestaurant()" #restaurantForm="ngForm" ngNativeValidate>
           <input type="text" class="text_ville w-input" maxlength="256" name="Ville_recherche"
                  data-name="Ville_recherche" placeholder="Indiquer le code postal..." id="Ville_recherche"
-                 required="" [(ngModel)]="$ville">
+                 required="" [(ngModel)]="$ville" autocomplete="off">
           <input type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button w-button">
         </form>
       </div>

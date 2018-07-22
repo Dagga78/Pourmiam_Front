@@ -45,9 +45,6 @@ export class InscriptionComponent implements OnInit {
           .then(response => {
               this.errorServer = '';
               this.showDiv = CONFIRM_DIV;
-              this.timer = setTimeout(() => {
-                this.router.navigate(['/login']);
-              }, DELAI_SHOW_CONFIRM);
             },
             error => {
               this.errorServer = error;

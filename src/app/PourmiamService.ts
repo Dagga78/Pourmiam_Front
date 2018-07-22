@@ -8,6 +8,7 @@ import {Login} from './login/login';
 import {Restaurant} from './Module/Restaurant';
 import {promise} from 'selenium-webdriver';
 import {Email} from './forgotpassword/email';
+import {Password} from './forgotpassword/password';
 
 @Injectable()
 export class PourmiamService {
@@ -60,11 +61,24 @@ export class PourmiamService {
       .post(url, formdata, {headers: this.options.headers})
       .toPromise()
       .then(response => {
-        console.log('PourmiamService confirmAccount() response : ', response);
+        console.log('PourmiamService createResetPassord() response : ', response);
         return;
       })
       .catch(this.handleError);
 
+  }
+
+  confirmResetPassord(token: string, formdata: Password): Promise<any> {
+    // console.log('confirmAccount() token : ' + token);
+    const url = `${this.baseUrl}authent/reset/${token}/confirm`;
+    return this.http
+      .post(url, formdata, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('PourmiamService confirmResetPassord() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
   }
 
   //    Ajoute l'authent dans les headers

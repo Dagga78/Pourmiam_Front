@@ -17,7 +17,8 @@ const routes: Routes = [
   {path: 'profil', component: ProfilComponent},
   {path: 'forgotpassword', component: ForgotpasswordComponent},
   {path: 'profil', component: ProfilComponent},
-  {path: 'restaurant', component: RestaurantComponent}
+  {path: 'restaurant/:ville', component: RestaurantComponent},
+  {path: 'forgotpassword/:token/confirm', component: ForgotpasswordComponent}
 ];
 
 @NgModule({

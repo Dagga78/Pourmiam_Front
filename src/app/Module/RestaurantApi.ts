@@ -11,6 +11,8 @@ export class RestaurantApi extends Restaurant {
     this.city = fields['city'];
     this.positif = fields['positif'];
     this.negatif = fields['negatif'];
+
   }
+
 
 }

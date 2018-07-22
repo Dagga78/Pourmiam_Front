@@ -88,6 +88,7 @@ html.w-mod-touch * {
   cursor: pointer;
   border-radius: 0;
 }
+
 input.w-button {
   -webkit-appearance: button;
 }
@@ -293,6 +294,30 @@ input[type="reset"] {
 .w-form {
   margin: 0 0 15px;
 }
+.text_ville2 {
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  line-height: 1.428571429;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  width: 70%;
+  height: 30px;
+  margin-top: 0px;
+  margin-left: 100px;
+  padding-left: 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  border-right: 1px none #000;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-size: 20px;
+}
+
 .w-form-done {
   display: none;
   padding: 20px;

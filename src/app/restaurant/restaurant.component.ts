@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {PourmiamService} from '../PourmiamService';
 import {Restaurant} from '../Module/Restaurant';
 
@@ -15,14 +15,32 @@ export class RestaurantComponent implements OnInit {
 
   public ShowConnexion = FIRST_DIV;
   private $auth;
+  public ville;
+  public errorServer = '';
+  public listrestaurant: Restaurant[];
 
   constructor(public pourmiamService: PourmiamService,
-              private router: Router
+              private router: Router,
+              private route: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
     this.getauthent();
+    this.route.params.subscribe((params) => {
+      // console.log("InscriptionComponent token = " + params.token);
+      if (params.ville !== undefined) {
+        this.pourmiamService.getListOfRestaurant(params.ville)
+          .then(response => {
+              this.listrestaurant = response;
+              console.log('getListOfRestaurant onsubmit() response = ' + this.listrestaurant);
+            },
+            error => {
+              // console.log('LoginComponent onSubmit() error = ' + error);
+              this.errorServer = error;
+            });
+      }
+    });
   }
 
   getauthent() {
@@ -38,6 +56,10 @@ export class RestaurantComponent implements OnInit {
     console.log(this.$auth);
     this.ShowConnexion = 0;
     this.router.navigate(['']);
+  }
+
+  searchRestaurant() {
+    this.router.navigate(['/restaurant/' + this.ville]);
   }
 
 }

@@ -34,32 +34,32 @@
         <label for="E_mail">E-mail</label>
         <input type="email" class="w-input" maxlength="256" name="E_mail" data-name="E_mail"
                placeholder="Entrer votre e-mail" id="E_mail" required=""
-               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="inscription.email">
+               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [(ngModel)]="inscription.email" autocomplete="off">
         <div class="w-row">
           <div class="w-col w-col-6">
             <label for="Nom">Nom :</label>
             <input type="text" class="w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="Entrer votre Nom"
-                   id="Nom" required="" [(ngModel)]="inscription.lastname">
+                   id="Nom" required="" [(ngModel)]="inscription.lastname" autocomplete="off">
           </div>
           <div class="w-col w-col-6">
             <label for="Prenom">Prénom :</label>
             <input type="text" class="w-input" maxlength="256" name="Prenom" data-name="Prenom"
-                   placeholder="Entrer votre Prénom" id="Prenom" required="" [(ngModel)]="inscription.firstname">
+                   placeholder="Entrer votre Prénom" id="Prenom" required="" [(ngModel)]="inscription.firstname" autocomplete="off">
           </div>
         </div>
         <label for="Password">Mot de passe :</label>
         <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password"
-               placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="Password">
+               placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="Password" autocomplete="off">
         <label for="VPassword">Vérification Mot de passe :</label>
         <input type="password" class="w-input" maxlength="256" name="VPassword" data-name="VPassword"
-               placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword">
+               placeholder="Re-entrer votre Mot de passe" id="VPassword" required="" [(ngModel)]="VPassword" autocomplete="off">
         <input type="submit" value="Je m'inscris" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
     </div>
   </div>
 </div>
 <div class="container-4 w-container" [hidden]="showDiv != 2">
-  <div class="div-block-6">
+  <div class="div-block-5">
     <h1 class="heading-15"><strong>Vous y êtes presque</strong><br></h1>
     <div class="w-row">
       <div class="column-4 w-col w-col-6">
@@ -70,13 +70,13 @@
         <div class="text-block-12">Un e-mail de confirmation vous a été envoyé à : {{inscription.email}} (Celà peut
           prendre quelque minute)
         </div>
-        <a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact(Je n'ai pas recus de mail)" class="link">Je
+        <a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact(Je n'ai pas recus de mail d'inscription)" class="link">Je
           n&#x27;ai pas reçu d&#x27;e-mail</a></div>
     </div>
   </div>
 </div>
-<div class="container-4 w-container">
-  <div class="div-block-7" [hidden]="showDiv != 3">
+<div class="container-4 w-container" [hidden]="showDiv != 3">
+  <div class="div-block-7" >
     <h1 class="heading-15"><strong>FÉLICITATION !</strong><br></h1>
     <div class="text-block-12">Votre inscription est à present validée !! à bientôt sur notre site PourMiam'
     </div>

@@ -149,6 +149,26 @@
   align-items: stretch;
 }
 
+.form4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  float: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
 .text_ville {
   width: 70%;
   height: 60px;
@@ -180,8 +200,38 @@
   font-size: 20px;
 }
 
+.recherche_button2 {
+  display: block;
+  width: 25%;
+  height: 30px;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float: none;
+  clear: none;
+  border-right: 0px solid #000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #ffba51;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
 .form-block {
   position: relative;
+  top: 204px;
+  bottom: -47px;
+  display: block;
+  margin-top: 0px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form-block5 {
   top: 204px;
   bottom: -47px;
   display: block;
@@ -903,6 +953,68 @@ footer {
   padding-bottom: 30px;
   background-color: #fff;
   box-shadow: -1px 1px 2px -1px #000;
+}
+
+.image-7 {
+  position: static;
+  display: block;
+  overflow: visible;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: 1px solid #000;
+}
+
+.text-block-15 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #ffc652;
+}
+
+.text-block-18 {
+  margin-top: 5px;
+}
+
+.text-block-17 {
+  font-size: 12px;
+  margin-top: 10px;
+  float: right;
+}
+
+.text-block-16 {
+  margin-top: 50px;
+}
+
+.link-3 {
+  margin-top: 40px;
+  margin-right: 15px;
+  float: right;
+  border: 1px none #000;
+  border-radius: 150px;
+  background-color: #ffc652;
+  color: #333;
+}
+
+.image-8 {
+  margin-right: 16px;
+  margin-left: 15px;
+  padding-left: 0px;
+}
+
+.image-9 {
+  margin-right: 15px;
+}
+
+.column-8 {
+  margin-top: 45px;
+  padding-left: 0px;
+}
+
+.div-block-8 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
 }
 
 .column-4 {
