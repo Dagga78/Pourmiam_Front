@@ -18,6 +18,7 @@ export class RestaurantComponent implements OnInit {
   public ville;
   public errorServer = '';
   public listrestaurant: Restaurant[];
+  public budgetradio = undefined;
 
   constructor(public pourmiamService: PourmiamService,
               private router: Router,
@@ -62,4 +63,9 @@ export class RestaurantComponent implements OnInit {
     this.router.navigate(['/restaurant/' + this.ville]);
   }
 
+  getBudget() {
+    if (this.budgetradio === 4) {
+      this.budgetradio = undefined;
+    }
+  }
 }

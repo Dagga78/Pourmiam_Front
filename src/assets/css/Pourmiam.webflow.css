@@ -1017,8 +1017,24 @@ footer {
   border: 1px solid #000;
 }
 
+.visible {
+  display: block !important;
+}
+
+.div-block-9 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  display: none;
+}
+
 .column-4 {
   padding-bottom: 40px;
+}
+
+div[visible] {
+  display: block;
 }
 
 .text-block-12 {
@@ -1027,6 +1043,10 @@ footer {
   font-family: Varela, sans-serif;
   font-weight: 400;
   text-align: center;
+}
+
+visible {
+  display: block;
 }
 
 .link {
