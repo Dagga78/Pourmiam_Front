@@ -81,6 +81,32 @@ export class PourmiamService {
       .catch(this.handleError);
   }
 
+  RestaurantUp(idrestaurant: string): Promise<any> {
+    // console.log('confirmAccount() token : ' + token);
+    const url = `${this.baseUrl}restaurant/positif/${idrestaurant}`;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('PourmiamService RestaurantUp() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
+  }
+
+  RestaurantDown(idrestaurant: string): Promise<any> {
+    // console.log('confirmAccount() token : ' + token);
+    const url = `${this.baseUrl}restaurant/negatif/${idrestaurant}`;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('PourmiamService RestaurantDown() response : ', response);
+        return;
+      })
+      .catch(this.handleError);
+  }
+
   //    Ajoute l'authent dans les headers
   setAuthent(token: string) {
     // console.log('Pourmiam setAuthent() token : ', token);
@@ -133,7 +159,20 @@ export class PourmiamService {
       .toPromise()
       .then(response => {
         const jsonResp = response.json();
-        console.log('listactivite() jsonResp : ', jsonResp);
+        console.log('getListOfRestaurant() jsonResp : ', jsonResp);
+        return jsonResp;
+      })
+      .catch(this.handleError);
+  }
+
+  getRestaurant(id: string): Promise<any> {
+    const url = `${this.baseUrl}/restaurant/` + id;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        const jsonResp = response.json();
+        console.log('getRestaurant() jsonResp : ', jsonResp);
         return jsonResp;
       })
       .catch(this.handleError);

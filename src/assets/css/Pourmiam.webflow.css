@@ -999,10 +999,12 @@ footer {
   margin-right: 16px;
   margin-left: 15px;
   padding-left: 0px;
+  cursor: pointer;
 }
 
 .image-9 {
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .column-8 {
@@ -1016,6 +1018,74 @@ footer {
   margin-bottom: 10px;
   border: 1px solid #000;
 }
+
+
+.div-block-10 {
+  margin-right: 0%;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  background-color: hsla(54, 81%, 73%, .43);
+}
+
+.heading-17 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.text-block-19 {
+  margin-left: 40px;
+}
+
+.div-block-11 {
+  margin-right: 20%;
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  background-color: hsla(54, 81%, 73%, .48);
+}
+
+.row-5 {
+  margin-right: -10px;
+}
+
+.column-9 {
+  padding-left: 23px;
+}
+
+.submit-button-4 {
+  position: relative;
+  left: -1%;
+  top: 0%;
+  right: 0%;
+  bottom: -9px;
+  margin-top: 0px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #ff8900;
+  color: #000;
+}
+
+.textarea {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.text-field-2 {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 
 .visible {
   display: block !important;

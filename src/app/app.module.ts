@@ -14,6 +14,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import {Restaurant} from './Module/Restaurant';
+import { RestaurantdetailComponent } from './restaurantdetail/restaurantdetail.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {Restaurant} from './Module/Restaurant';
     ProfilComponent,
     ForgotpasswordComponent,
     RestaurantComponent,
+    RestaurantdetailComponent,
   ],
   imports: [
     BrowserModule,

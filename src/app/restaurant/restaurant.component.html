@@ -29,19 +29,23 @@
       <div class="column-7 w-col w-col-3">
         <div class="form-block-3 w-form" style="margin-top: 30px;">
           <form id="cuisine-form" name="email-form" data-name="Email Form"><label>Cuisine &amp; plats :</label>
-            <div class="w-radio"><input id="Typecuisine1" type="radio" name="Type_cuisine" value="0" [(ngModel)]="idTypecuisine"
+            <div class="w-radio"><input id="Typecuisine1" type="radio" name="Type_cuisine" value="0"
+                                        [(ngModel)]="idTypecuisine"
                                         data-name="Type_cuisine"
                                         class="w-radio-input"><label for="Typecuisine1"
                                                                      class="w-form-label">Française</label></div>
-            <div class="w-radio"><input id="Typecuisine2" type="radio" name="Type_cuisine" value="1" [(ngModel)]="idTypecuisine"
+            <div class="w-radio"><input id="Typecuisine2" type="radio" name="Type_cuisine" value="1"
+                                        [(ngModel)]="idTypecuisine"
                                         data-name="Type_cuisine"
                                         class="w-radio-input"><label for="Typecuisine2"
                                                                      class="w-form-label">Italienne</label></div>
-            <div class="w-radio"><input id="Typecuisine3" type="radio" name="Type_cuisine" value="2" [(ngModel)]="idTypecuisine"
+            <div class="w-radio"><input id="Typecuisine3" type="radio" name="Type_cuisine" value="2"
+                                        [(ngModel)]="idTypecuisine"
                                         data-name="Type_cuisine"
                                         class="w-radio-input"><label for="Typecuisine3"
                                                                      class="w-form-label">Japonaise</label></div>
-            <div class="w-radio"><input id="Typecuisine4" type="radio" name="Type_cuisine" value="3" [(ngModel)]="idTypecuisine"
+            <div class="w-radio"><input id="Typecuisine4" type="radio" name="Type_cuisine" value="3"
+                                        [(ngModel)]="idTypecuisine"
                                         data-name="Type_cuisine"
                                         class="w-radio-input"><label for="Typecuisine4"
                                                                      class="w-form-label">Américaine</label></div>
@@ -49,20 +53,21 @@
         </div>
         <div class="form-block-3 w-form">
           <form id="budget-form" name="email-form" data-name="Email Form"><label>Budget :</label>
-            <div class="w-radio"><input id="Budget0" type="radio"  [(ngModel)]="Budget"
+            <div class="w-radio"><input id="Budget0" type="radio" [(ngModel)]="Budget"
                                         value="4" data-name="Budget"
-                                        class="w-radio-input"><label for="Budget0" class="w-form-label">Aucun</label></div>
-            <div class="w-radio"><input id="Budget1" type="radio"  [(ngModel)]="Budget"
+                                        class="w-radio-input"><label for="Budget0" class="w-form-label">Aucun</label>
+            </div>
+            <div class="w-radio"><input id="Budget1" type="radio" [(ngModel)]="Budget"
                                         value="0" data-name="Budget"
                                         class="w-radio-input"><label for="Budget1" class="w-form-label">€</label></div>
-            <div class="w-radio"><input id="Budget2" type="radio"  [(ngModel)]="Budget"
+            <div class="w-radio"><input id="Budget2" type="radio" [(ngModel)]="Budget"
                                         value="1" data-name="Budget"
                                         class="w-radio-input"><label for="Budget2" class="w-form-label">€€</label></div>
-            <div class="w-radio"><input id="Budget3" type="radio"  [(ngModel)]="Budget"
+            <div class="w-radio"><input id="Budget3" type="radio" [(ngModel)]="Budget"
                                         value="2" data-name="Budget"
                                         class="w-radio-input"><label for="Budget3" class="w-form-label">€€€</label>
             </div>
-            <div class="w-radio"><input id="Budget4" type="radio"  [(ngModel)]="Budget"
+            <div class="w-radio"><input id="Budget4" type="radio" [(ngModel)]="Budget"
                                         value="3" data-name="Budget"
                                         class="w-radio-input"><label for="Budget4" class="w-form-label">€€€€</label>
             </div>
@@ -72,7 +77,7 @@
       <div class="w-col w-col-9">
         <div>
           <div class="form-block5 w-form">
-            <h1 class="heading-16">Rechercher d&#x27;autres restaurant<br></h1>
+            <h1 class="heading-16">Rechercher d&#x27;autres restaurants<br></h1>
             <form id="email-form" name="email-form" data-name="Email Form" (submit)="searchRestaurant()" class="form4">
               <input type="text"
                      class="text_ville2"
@@ -85,7 +90,8 @@
               type="submit" value="Recherche" data-wait="Un instant..." class="recherche_button2 w-button"></form>
           </div>
         </div>
-        <div class="div-block-9" *ngFor="let restaurant of listrestaurant" [class.visible]="(Budget === undefined && idTypecuisine === undefined) || (restaurant.idbudget === Budget && idTypecuisine === restaurant.idTypecuisine) || (restaurant.idbudget === Budget && idTypecuisine === undefined) || (restaurant.idTypecuisine === idTypecuisine && idbudget === undefined)">
+        <div class="div-block-9" *ngFor="let restaurant of listrestaurant"
+             [class.visible]="(Budget === undefined && idTypecuisine === undefined) || (restaurant.idbudget === Budget && idTypecuisine === restaurant.idTypecuisine) || (restaurant.idbudget === Budget && idTypecuisine === undefined) || (restaurant.idTypecuisine === idTypecuisine && idbudget === undefined)">
           <div class="w-row">
             <div class="w-col w-col-4"><img src="../../assets/images/2c436799-46fc-363c-4ba8-95a99770da15.jpg"
                                             width="200" height="110"
@@ -102,30 +108,33 @@
               <div class="text-block-17">Recommandé à {{(restaurant.positif*100
                 /(restaurant.positif--restaurant.negatif) | number:'2.0-0')}} %
               </div>
-              <a href="#" class="link-3 w-button">Plus d&#x27;info</a></div>
-            <div class="column-8 w-col w-col-2"><img src="../../assets/images/like-2.png" width="35"
-                                                     class="image-8"><img src="../../assets/images/like-1.png"
-                                                                          width="35" class="image-9"></div>
+              <a (click)="detailRestaurant(restaurant.idRestaurant)" class="link-3 w-button">Plus d&#x27;info</a></div>
+            <div class="column-8 w-col w-col-2">
+              <img src="../../assets/images/like-2.png" width="35" class="image-8"
+                   (click)="restaurantup(restaurant.idRestaurant)">
+              <img src="../../assets/images/like-1.png" width="35" class="image-9"
+                   (click)="restaurantdown(restaurant.idRestaurant)">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="div-block-3">
-      <div class="containerfindepage w-container">
-        <div class="w-row">
-          <div class="w-col w-col-2">
-            <div></div>
-          </div>
-          <div class="w-col w-col-2"></div>
-          <div class="w-col w-col-2"></div>
-          <div class="w-col w-col-2"></div>
-          <div class="w-col w-col-2"></div>
-          <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"
-                                        class="link-2">Contactez-nous<br></a></div>
+</div>
+<div class="section">
+  <div class="div-block-3">
+    <div class="containerfindepage w-container">
+      <div class="w-row">
+        <div class="w-col w-col-2">
+          <div></div>
         </div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"
+                                      class="link-2">Contactez-nous<br></a></div>
       </div>
     </div>
   </div>
-
+</div>

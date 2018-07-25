@@ -7,6 +7,7 @@ import {InscriptionComponent} from './inscription/inscription.component';
 import {ProfilComponent} from './profil/profil.component';
 import {ForgotpasswordComponent} from './forgotpassword/forgotpassword.component';
 import {RestaurantComponent} from './restaurant/restaurant.component';
+import {RestaurantdetailComponent} from './restaurantdetail/restaurantdetail.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'forgotpassword', component: ForgotpasswordComponent},
   {path: 'profil', component: ProfilComponent},
   {path: 'restaurant/:ville', component: RestaurantComponent},
+  {path: 'restaurantdetail/:id', component: RestaurantdetailComponent},
   {path: 'forgotpassword/:token/confirm', component: ForgotpasswordComponent}
 ];
 

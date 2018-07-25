@@ -3,7 +3,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {PourmiamService} from '../PourmiamService';
 import {Restaurant} from '../Module/Restaurant';
 
-const FIRST_DIV = 1;
 
 @Component({
   selector: 'app-restaurant',
@@ -13,12 +12,12 @@ const FIRST_DIV = 1;
 
 export class RestaurantComponent implements OnInit {
 
-  public ShowConnexion = FIRST_DIV;
+  public ShowConnexion = 0;
   private $auth;
   public ville;
   public errorServer = '';
   public listrestaurant: Restaurant[];
-  public budgetradio = undefined;
+  public url = '';
 
   constructor(public pourmiamService: PourmiamService,
               private router: Router,
@@ -47,6 +46,7 @@ export class RestaurantComponent implements OnInit {
   getauthent() {
     this.$auth = this.pourmiamService.getAuthent();
     console.log(this.$auth);
+    this.url = this.route.toString();
     if (this.$auth !== null) {
       this.ShowConnexion = 1;
     }
@@ -63,9 +63,39 @@ export class RestaurantComponent implements OnInit {
     this.router.navigate(['/restaurant/' + this.ville]);
   }
 
-  getBudget() {
-    if (this.budgetradio === 4) {
-      this.budgetradio = undefined;
-    }
+  detailRestaurant(id) {
+    this.router.navigate(['/restaurantdetail/' + id]);
+  }
+
+  restaurantup(idrestaurant) {
+    this.pourmiamService.RestaurantUp(idrestaurant)
+      .then(response => {
+          this.errorServer = '';
+          console.log('restaurantup onsubmit() response = ' + response);
+          this.route.params.subscribe((params) => {
+            this.router.navigate(['/restaurant/' + params.ville]);
+          });
+        },
+        error => {
+          console.log('restaurantup onSubmit() error = ' + error);
+          this.errorServer = error;
+        });
+
+  }
+
+  restaurantdown(idrestaurant) {
+    this.pourmiamService.RestaurantDown(idrestaurant)
+      .then(response => {
+          this.errorServer = '';
+          console.log('RestaurantDown onsubmit() response = ' + response);
+          this.route.params.subscribe((params) => {
+            this.router.navigate(['/restaurant/' + params.ville]);
+          });
+        },
+        error => {
+          console.log('RestaurantDown onSubmit() error = ' + error);
+          this.errorServer = error;
+        });
+
   }
 }

@@ -24,7 +24,7 @@
 </div>
 <div class="container-4 w-container">
   <div class="div-block-5">
-    <h1 class="heading-15">Connexions</h1>
+    <h1 class="heading-15">Connexion</h1>
     <div class="form-block-2 w-form">
       <div *ngIf="errorServer" class="text-mdp-instructions" style="color: red;">
         {{errorServer}}
@@ -36,8 +36,8 @@
                placeholder="Entrer votre e-mail" id="E_mail" required="" [(ngModel)]="login.email">
         <label for="Password">Mot de passe :</label>
         <input type="password" class="w-input" maxlength="256" name="Password" data-name="Password"
-               placeholder="Entrer votre Mot de passe" id="Password" required="" [(ngModel)]="login.password">
-        <input type="submit" value="Connexion" data-wait="Un instant..." class="submit-button-3 w-button">
+               placeholder="Entrer votre mot de passe" id="Password" required="" [(ngModel)]="login.password">
+        <input type="submit" value="Me connecter" data-wait="Un instant..." class="submit-button-3 w-button">
       </form>
       <a routerLink="/forgotpassword" routerLinkActive="active" style="margin-left: 60px">Mot de passe oublié</a>
     </div>

@@ -1,0 +1,97 @@
+<div class="sectionheader">
+  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbarpm w-nav">
+    <div class="containerheader w-container"><a href="index.html" class="logoimg w-nav-brand"><img
+      src="../../assets/images/PourmiamTrans.png" width="90" height="60"
+      srcset="../../assets/images/PourmiamTrans-p-500.png 500w, ../../assets/images/PourmiamTrans.png 945w" sizes="90px"
+      class="logoimg"></a>
+      <div class="text_logo">PourMiam&#x27;</div>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a routerLink="" routerLinkActive="active" class="accueil_button w-nav-link">Accueil</a>
+        <a routerLink="/login" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 0'>Connexion</a>
+        <a routerLink="/profil" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction"
+           [hidden]='ShowConnexion != 1'>Mon profil</a>
+        <a routerLink="" (click)="disconnect()" routerLinkActive="active" class="connexion_button w-nav-link"
+           data-ix="signininterraction" [hidden]='ShowConnexion != 1'>Deconnexion</a>
+        <a routerLink="/inscription" routerLinkActive="active" class="inscription_button w-nav-link"
+           data-ix="signupinterraction" [hidden]='ShowConnexion != 0'>Je m&#x27;inscris</a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section_recherche">
+  <div class="first_container w-container">
+    <h1 class="titre_restaurant">...</h1>
+    <div class="div-block-2">
+      <div data-animation="slide" data-duration="500" data-infinite="1" class="slider w-slider">
+        <div class="w-slider-mask">
+          <div class="slide w-slide"></div>
+          <div class="slide-2 w-slide"></div>
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container">
+    <h1 class="heading-11">Description</h1>
+    <div class="w-row">
+      <div class="w-col w-col-8">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis venenatis. Ut at varius libero. Maecenas et justo sed augue egestas consequat ut pulvinar massa. Aenean ut massa id ante aliquet luctus. Nulla egestas mauris a massa tincidunt, eget gravida tortor vestibulum. Praesent leo felis, sollicitudin pharetra leo ac, tempor pulvinar dolor. Curabitur quis iaculis turpis. In hac habitasse platea dictumst. Proin lobortis pulvinar neque, id porta arcu vehicula vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla cursus orci vel nunc tincidunt scelerisque. Donec sed posuere sapien.</div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="div-block-4">
+          <div class="text-block-10"><b>Nom Restaurant :</b> {{Restaurant.name}} <br><b>Adresse :</b> {{Restaurant.Adresse}} <br><b>Ville :</b> {{Restaurant.Zipcode}} <br><b>Code postal :</b> {{Restaurant.city}}<br><b>Tarif :</b> {{Restaurant.nomBudget}}<br><b>Cuisine :</b> {{Restaurant.nomtype}}</div>
+        </div>
+      </div>
+    </div>
+    <h1 class="heading-10">Nos principaux plats</h1>
+    <div class="w-row">
+      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+    </div>
+    <h1 class="heading-12">Commentaires</h1>
+    <div class="div-block-10">
+      <h4 class="heading-17">Nom user</h4>
+      <div class="text-block-19">Commentaire</div>
+    </div>
+    <div  [hidden]="ShowConnexion != 1" class="div-block-11">
+      <div class="w-form">
+        <form id="email-form" name="email-form" data-name="Email Form">
+          <div class="row-5 w-row">
+            <div class="column-9 w-col w-col-10"><input type="text" class="text-field-2 w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Commentaire" id="field-2" required=""></div>
+            <div class="w-col w-col-2"><input type="submit" value="Envoyer" data-wait="un instant" class="submit-button-4 w-button"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="div-block-3">
+    <div class="containerfindepage w-container">
+      <div class="w-row">
+        <div class="w-col w-col-2">
+          <div></div>
+        </div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"></div>
+        <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"
+                                      class="link-2">Contactez-nous<br></a></div>
+      </div>
+    </div>
+  </div>
+</div>
