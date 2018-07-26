@@ -12,7 +12,7 @@ export class Restaurant {
   idbudget: number;
   nomBudget: string;
   nomtype: string;
-  photo : string;
+  photo: string;
 
   toString() {
     return ('idRestaurant = ' + this.idRestaurant + '\n' +

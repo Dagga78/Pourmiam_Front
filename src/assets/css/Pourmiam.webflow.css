@@ -623,7 +623,6 @@
 .slide {
   border-style: none;
   border-radius: 20px;
-  background-image: url('../images/41993-das-loft-sofitel-19to1.jpeg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: repeat;
@@ -1105,6 +1104,9 @@ footer {
 
 div[visible] {
   display: block;
+}
+.div-block-12{
+  padding-top: 10px;
 }
 
 .text-block-12 {

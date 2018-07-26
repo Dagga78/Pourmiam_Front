@@ -25,11 +25,11 @@
 </div>
 <div class="section_recherche">
   <div class="first_container w-container">
-    <h1 class="titre_restaurant">...</h1>
+    <h1 class="titre_restaurant">{{Restaurant.name}}</h1>
     <div class="div-block-2">
       <div data-animation="slide" data-duration="500" data-infinite="1" class="slider w-slider">
         <div class="w-slider-mask">
-          <div class="slide w-slide"></div>
+          <div class="slide w-slide" style="background-image: url({{Restaurant.photo}});"></div>
           <div class="slide-2 w-slide"></div>
         </div>
         <div class="w-slider-arrow-left">
@@ -55,22 +55,23 @@
       </div>
     </div>
     <h1 class="heading-10">Nos principaux plats</h1>
-    <div class="w-row">
-      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+    <div class="w-row" *ngFor="let plat of listplats">
+      <div class="w-col w-col-3 w-col-small-small-stack">{{plat.name}}</div>
       <div class="w-col w-col-3 w-col-small-small-stack"></div>
       <div class="w-col w-col-3 w-col-small-small-stack"></div>
       <div class="w-col w-col-3 w-col-small-small-stack"></div>
     </div>
-    <h1 class="heading-12">Commentaires</h1>
-    <div class="div-block-10">
-      <h4 class="heading-17">Nom user</h4>
-      <div class="text-block-19">Commentaire</div>
+    <h1 class="heading-12" >Commentaires</h1>
+    <div class="div-block-10" *ngFor="let commentary of listCommentaire">
+      <h4 class="heading-17">{{commentary.Nom}}</h4>
+      <div class="text-block-19">{{commentary.Commentaire}}</div>
     </div>
-    <div  [hidden]="ShowConnexion != 1" class="div-block-11">
+    <div  class="div-block-11">
       <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form">
+        <form id="email-form" name="email-form" data-name="Email Form" (submit)='postCommentaire()' class="form-3"
+              #CommentForm="ngForm" ngNativeValidate>
           <div class="row-5 w-row">
-            <div class="column-9 w-col w-col-10"><input type="text" class="text-field-2 w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Commentaire" id="field-2" required=""></div>
+            <div class="column-9 w-col w-col-10"><input type="text" class="text-field-2 w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Commentaire" id="field-2" required="" [(ngModel)]="newCommentary.Commentaire"></div>
             <div class="w-col w-col-2"><input type="submit" value="Envoyer" data-wait="un instant" class="submit-button-4 w-button"></div>
           </div>
         </form>
@@ -82,11 +83,11 @@
   <div class="div-block-3">
     <div class="containerfindepage w-container">
       <div class="w-row">
-        <div class="w-col w-col-2">
-          <div></div>
+        <div class="w-col w-col-6">
+          <div class="div-block-12">Association @JoRiBo<br>
+            48 Rue Camille Desmoulins, 92130 Issy-les-Moulineaux
+          </div>
         </div>
-        <div class="w-col w-col-2"></div>
-        <div class="w-col w-col-2"></div>
         <div class="w-col w-col-2"></div>
         <div class="w-col w-col-2"></div>
         <div class="w-col w-col-2"><a href="mailto:contact.pourmiam@gmail.com?subject=Demande de contact"

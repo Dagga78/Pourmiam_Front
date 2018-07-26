@@ -9,6 +9,8 @@ import {Restaurant} from './Module/Restaurant';
 import {promise} from 'selenium-webdriver';
 import {Email} from './forgotpassword/email';
 import {Password} from './forgotpassword/password';
+import {Commentaire} from './Module/Commentaire';
+import {NewCommentaire} from './Module/NewCommentaire';
 
 @Injectable()
 export class PourmiamService {
@@ -174,6 +176,44 @@ export class PourmiamService {
         const jsonResp = response.json();
         console.log('getRestaurant() jsonResp : ', jsonResp);
         return jsonResp;
+      })
+      .catch(this.handleError);
+  }
+
+  getListOfPlats(id: string): Promise<any> {
+    const url = `${this.baseUrl}/plats/` + id;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        const jsonResp = response.json();
+        console.log('getListOfPlats() jsonResp : ', jsonResp);
+        return jsonResp;
+      })
+      .catch(this.handleError);
+  }
+
+  getListOfCommentaire(id: string): Promise<any> {
+    const url = `${this.baseUrl}/commentary/` + id;
+    return this.http
+      .get(url, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        const jsonResp = response.json();
+        console.log('getListOfCommentaire() jsonResp : ', jsonResp);
+        return jsonResp;
+      })
+      .catch(this.handleError);
+  }
+
+  postCommentaire(id: string, formdata: NewCommentaire): Promise<any> {
+    const url = `${this.baseUrl}/commentary/create/` + id;
+    return this.http
+      .post(url, formdata, {headers: this.options.headers})
+      .toPromise()
+      .then(response => {
+        console.log('getListOfCommentaire() jsonResp : ', response);
+        return;
       })
       .catch(this.handleError);
   }
