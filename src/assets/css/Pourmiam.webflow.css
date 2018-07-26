@@ -964,6 +964,17 @@ footer {
   border: 1px solid #000;
 }
 
+.image-10 {
+  position: static;
+  display: block;
+  overflow: visible;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+
 .text-block-15 {
   margin-top: 10px;
   font-size: 20px;
@@ -1096,6 +1107,18 @@ footer {
   margin-bottom: 10px;
   border: 1px solid #000;
   display: none;
+}
+
+.div-block-13 {
+  text-align: center;
+  background-color: hsla(54, 81%, 73%, .43);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #000;
+  border-radius: 20px;
 }
 
 .column-4 {

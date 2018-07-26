@@ -27,52 +27,51 @@
   <div class="first_container w-container">
     <h1 class="titre_restaurant">{{Restaurant.name}}</h1>
     <div class="div-block-2">
-      <div data-animation="slide" data-duration="500" data-infinite="1" class="slider w-slider">
-        <div class="w-slider-mask">
-          <div class="slide w-slide" style="background-image: url({{Restaurant.photo}});"></div>
-          <div class="slide-2 w-slide"></div>
-        </div>
-        <div class="w-slider-arrow-left">
-          <div class="w-icon-slider-left"></div>
-        </div>
-        <div class="w-slider-arrow-right">
-          <div class="w-icon-slider-right"></div>
-        </div>
-        <div class="w-slider-nav w-round"></div>
-      </div>
+      <img
+        src="../../assets/images/{{Restaurant.photo}}"
+        width="980" height="450"
+        class="image-10">
     </div>
   </div>
   <div class="w-container">
     <h1 class="heading-11">Description</h1>
     <div class="w-row">
       <div class="w-col w-col-8">
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis venenatis. Ut at varius libero. Maecenas et justo sed augue egestas consequat ut pulvinar massa. Aenean ut massa id ante aliquet luctus. Nulla egestas mauris a massa tincidunt, eget gravida tortor vestibulum. Praesent leo felis, sollicitudin pharetra leo ac, tempor pulvinar dolor. Curabitur quis iaculis turpis. In hac habitasse platea dictumst. Proin lobortis pulvinar neque, id porta arcu vehicula vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla cursus orci vel nunc tincidunt scelerisque. Donec sed posuere sapien.</div>
+        <div>{{Restaurant.Description}}
+        </div>
       </div>
       <div class="w-col w-col-4">
         <div class="div-block-4">
-          <div class="text-block-10"><b>Nom Restaurant :</b> {{Restaurant.name}} <br><b>Adresse :</b> {{Restaurant.Adresse}} <br><b>Ville :</b> {{Restaurant.Zipcode}} <br><b>Code postal :</b> {{Restaurant.city}}<br><b>Tarif :</b> {{Restaurant.nomBudget}}<br><b>Cuisine :</b> {{Restaurant.nomtype}}</div>
+          <div class="text-block-10"><b>Nom Restaurant :</b> {{Restaurant.name}} <br><b>Adresse :</b>
+            {{Restaurant.Adresse}} <br><b>Ville :</b> {{Restaurant.Zipcode}} <br><b>Code postal :</b>
+            {{Restaurant.city}}<br><b>Tarif :</b> {{Restaurant.nomBudget}}<br><b>Cuisine :</b> {{Restaurant.nomtype}}
+          </div>
         </div>
       </div>
     </div>
     <h1 class="heading-10">Nos principaux plats</h1>
-    <div class="w-row" *ngFor="let plat of listplats">
-      <div class="w-col w-col-3 w-col-small-small-stack">{{plat.name}}</div>
-      <div class="w-col w-col-3 w-col-small-small-stack"></div>
-      <div class="w-col w-col-3 w-col-small-small-stack"></div>
-      <div class="w-col w-col-3 w-col-small-small-stack"></div>
+    <div class="w-row">
+      <div class="w-col w-col-35 div-block-13" *ngFor="let plat of listplats"><img
+        src="../../assets/images/{{plat.photo}}"
+        width="190" height="110"
+        class="image-10"><b>{{plat.name}}</b></div>
     </div>
-    <h1 class="heading-12" >Commentaires</h1>
+    <h1 class="heading-12">Commentaires</h1>
     <div class="div-block-10" *ngFor="let commentary of listCommentaire">
       <h4 class="heading-17">{{commentary.Nom}}</h4>
       <div class="text-block-19">{{commentary.Commentaire}}</div>
     </div>
-    <div  class="div-block-11">
+    <div class="div-block-11">
       <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" (submit)='postCommentaire()' class="form-3"
               #CommentForm="ngForm" ngNativeValidate>
           <div class="row-5 w-row">
-            <div class="column-9 w-col w-col-10"><input type="text" class="text-field-2 w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Commentaire" id="field-2" required="" [(ngModel)]="newCommentary.Commentaire"></div>
-            <div class="w-col w-col-2"><input type="submit" value="Envoyer" data-wait="un instant" class="submit-button-4 w-button"></div>
+            <div class="column-9 w-col w-col-10"><input type="text" class="text-field-2 w-input" maxlength="256"
+                                                        name="field-2" data-name="Field 2" placeholder="Commentaire"
+                                                        id="field-2" required=""
+                                                        [(ngModel)]="newCommentary.Commentaire"></div>
+            <div class="w-col w-col-2"><input type="submit" value="Envoyer" data-wait="un instant"
+                                              class="submit-button-4 w-button"></div>
           </div>
         </form>
       </div>
