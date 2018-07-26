@@ -12,6 +12,7 @@ export class Restaurant {
   idbudget: number;
   nomBudget: string;
   nomtype: string;
+  photo : string;
 
   toString() {
     return ('idRestaurant = ' + this.idRestaurant + '\n' +
@@ -26,6 +27,7 @@ export class Restaurant {
       'idTypecuisine = ' + this.idTypecuisine + '\n' +
       'idbudget = ' + this.idbudget + '\n' +
       'nomBudget = ' + this.nomBudget + '\n' +
+      'photo = ' + this.photo + '\n' +
       'nomtype = ' + this.nomtype + '\n');
   }
 

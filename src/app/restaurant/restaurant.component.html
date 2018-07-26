@@ -93,9 +93,8 @@
         <div class="div-block-9" *ngFor="let restaurant of listrestaurant"
              [class.visible]="(Budget === undefined && idTypecuisine === undefined) || (restaurant.idbudget === Budget && idTypecuisine === restaurant.idTypecuisine) || (restaurant.idbudget === Budget && idTypecuisine === undefined) || (restaurant.idTypecuisine === idTypecuisine && idbudget === undefined)">
           <div class="w-row">
-            <div class="w-col w-col-4"><img src="../../assets/images/2c436799-46fc-363c-4ba8-95a99770da15.jpg"
+            <div class="w-col w-col-4"><img src="../../assets/images/{{restaurant.photo}}"
                                             width="200" height="110"
-                                            srcset="../../assets/images/2c436799-46fc-363c-4ba8-95a99770da15-p-500.jpeg 500w, images/2c436799-46fc-363c-4ba8-95a99770da15-p-1080.jpeg 1080w, images/2c436799-46fc-363c-4ba8-95a99770da15.jpg 1140w"
                                             sizes="(max-width: 479px) 83vw, (max-width: 767px) 200px, (max-width: 991px) 179.65625px, 200px"
                                             class="image-7"></div>
             <div class="w-col w-col-4">
